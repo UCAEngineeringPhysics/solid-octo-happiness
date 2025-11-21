@@ -32,6 +32,8 @@ setup(
         ],
     },
     entry_points={
-        "console_scripts": ["diff_drive_node = solid_octo.diff_drive_controller:main"],
+        "console_scripts": [
+            "diff_drive_controller = solid_octo.diff_drive_controller:main"
+        ],
     },
 )

@@ -12,12 +12,8 @@ from math import sin, cos, pi
 
 
 class DiffDriveController(Node):
-    """
-    A ROS interface for the differential drive control
-    """
-
     def __init__(self):
-        super().__init__("octo_interface")
+        super().__init__("differential_drive_controller")
         # Create serial communication to Pico
         self.pico_msngr = serial.Serial("/dev/ttyACM0", 115200)
         self.listen_pico_msg_timer = self.create_timer(0.015, self.listen_pico_msg)
