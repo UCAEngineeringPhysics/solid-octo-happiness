@@ -63,7 +63,7 @@ def generate_launch_description():
         ],
     )
 
-    driver_node = Node(package="solid_octo", executable="drive")
+    diff_drive_node = Node(package="solid_octo", executable="diff_drive_node")
 
     rplidar_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -81,10 +81,11 @@ def generate_launch_description():
     return LaunchDescription(
         [
             sim_time_arg,
-            driver_node,
+            diff_drive_node,
             rplidar_launch,
             launch_teleop_twist_joy,
             footprint_static_tf_node,
             lidar_static_tf_node,
         ]
     )
+
