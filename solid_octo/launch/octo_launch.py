@@ -63,7 +63,7 @@ def generate_launch_description():
         ],
     )
 
-    diff_drive_node = Node(package="solid_octo", executable="diff_drive_node")
+    diff_drive_node = Node(package="solid_octo", executable="diff_drive_controller")
 
     rplidar_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -88,4 +88,3 @@ def generate_launch_description():
             lidar_static_tf_node,
         ]
     )
-
